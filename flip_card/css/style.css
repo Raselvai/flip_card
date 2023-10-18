@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+}
+
+button:focus, input:focus, textarea:focus {
+	outline: 0;
+}
+
+body {
+	background: linear-gradient(180deg, #FA4A6F 0%, #532B79 100%);
+}
+
+.card_wrap {
+	padding: 80px 15px;
+	height: 100vh;
+}
+
+.text_center {
+	text-align: center;
+}
+
+.card_wrap h2 {
+	font-size: 40px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.card_item {
+	width: 300px;
+	height: 380px;
+	background: #ffffff;
+	perspective: 1000px;
+	box-shadow: -10px 15px 40px 0 rgba(0, 0, 0, 0.38);
+	border-radius: 20px;
+	overflow: hidden;
+	margin: 30px auto 0 auto;
+}
+
+.img_fluid {
+	max-width: 100%;
+	height: auto;
+}
+
+.card_item .flip_inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: .8s;
+	transform-style: preserve-3d;
+	transition: .8s;
+}
+
+.card_item:hover .flip_inner {
+	transform: rotateY(180deg);
+}
+
+.card_item .flip_front, .card_item .flip_back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.card_item .flip_front {
+	transition: .3s;
+	transform-style: preserve-3d;
+	transition: .8s;
+	align-items: center;
+	justify-content: center;
+	display: inline-flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.card_item img {
+	width: 100% !important;
+	height: 100%;
+	border: 5px solid #ffffff;
+	background: #f8596d;
+	object-fit: cover;
+	border-radius: 20px;
+}
+
+.card_item .flip_back {
+	border: 5px solid #ffffff;
+	background: #f8596d;
+	padding: 25px;
+	border-radius: 20px;
+	transform: rotateY(180deg);
+}
+
+.card_item .flip_back h3 {
+	color: #ffffff;
+	font-size: 22px;
+	color: #ffffff;
+	line-height: 30px;
+}
+
+.card_item .flip_back p {
+	font-size: 18px;
+	color: #ffffff;
+	margin-top: 20px;
+}
